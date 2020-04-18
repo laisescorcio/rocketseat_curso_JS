@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <title>Curso Javascript</title>
+  </head>
+  <div id="app">
+
+  </div>
+  <body>
+    <script>
+           // Criar um botao
+      // quando clica cria um quadrado vermelho de 100 px altura e largura
+      // sempre que clicado, aparecerá um novo quadrado
+
+      // Criei um botao
+      var buttonElement = document.createElement('button');
+
+
+      //Criei um texto 
+      var textElement = document.createTextNode('Clique aqui');
+      // Vinculei o texto ao botão (agora o texto pertence ao button)
+      buttonElement.appendChild(textElement);
+
+
+      // Para aparecer o botão na tela
+      // Dei valor ao container, para ele ser o id app
+      var containerElement = document.querySelector('#app');
+      //Vinculei o button ao container (agora button é filho do container) 
+      containerElement.appendChild(buttonElement);
+
+
+      // Criar reação ONCLIC
+      
+      
+      // crio função para onclick
+      buttonElement.onclick=function () {
+        // quando clico, crio uma div contendo um quadrado vermelho
+        // quando clico pela segunda vez, cria um segundo quadrado
+      
+        // Criar uma div
+        var boxElement = document.createElement('div');
+        // Dizer que a div criada é filha do container que é o #app
+        containerElement.appendChild(boxElement);
+
+        // E dentro da diz quando clicar aparecerá esse estilo:
+        boxElement.style.width = 100;
+        boxElement.style.height = 100;
+        boxElement.style.margin = 10;
+        boxElement.style.backgroundColor = '#f00';
+
+      };
+      
+      
+    </script>
+  </body>
+</html>

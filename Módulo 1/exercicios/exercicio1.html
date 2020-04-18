@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Curso Javascript</title>
+  </head>
+  <body>
+    <div id="output"></div>
+    <script>
+      // Criar função para rua, numero, bairro, cidade e uf
+      // Retornar os valores como resposta completa
+
+
+      // OBJETO
+      var endereco = {
+        rua: "Rua dos Pinheiros",
+        numero: 1293,
+        bairro: "Centro",
+        cidade: "São Paulo",
+        uf: "SP",
+      };
+
+      var mensagem = "O usuário mora em " + endereco.cidade + " / " + endereco.uf + ", no bairro " + endereco.bairro + ", na rua '" + endereco.rua + "' com nº " + endereco.numero;
+
+      var output = document.querySelector("#output");
+      output.innerHTML = mensagem;
+    </script>
+  </body>
+</html>

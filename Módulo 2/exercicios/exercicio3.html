@@ -1,0 +1,28 @@
+<html">
+
+  <head>
+    <title>Curso Javascript</title>
+  </head>
+  <div id="app">
+
+  </div>
+
+  <body>
+    <script>
+      // Preencher uma lista <ul> com os itens 'Diego','gabriel' e 'lucas
+      var listElement = document.createElement('ul');
+      containerElement = document.querySelector('#app');
+
+      var nomes = ["Diego", "Gabriel", "Lucas"];
+
+      for (var nome of nomes) {
+        var itemElement = document.createElement('li');
+        var textElement = document.createTextNode(nome);
+        containerElement.appendChild(itemElement);
+        itemElement.appendChild(textElement);
+      }
+
+    </script>
+  </body>
+
+</html>

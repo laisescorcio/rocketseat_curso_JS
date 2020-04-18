@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title>Curso Javascript</title>
+  </head>
+  <body>
+    <button onclick="temHabilidade()">Verificar</button>
+    <div id="output"></div>
+
+    <script>
+      // Função para ver se há habilidade JavaScript
+      // Apresentar booleano True ou False, caso exista ou nao exista
+
+      // Definir variável com as habilidades
+      var skills = ["Javascript", "ReactJs", "React Native"];
+      // Definir variável do que quero encontrar dentro de determinada variável
+      var searchSkills = skills.indexOf("Javascript");
+
+      // Definir variável que caberá o resultado
+      var resultado;
+
+      // Estabelecer a função para que retorne um resultado
+      function temHabilidade() {
+        if (searchSkills != -1) {
+          resultado = true;
+        } else {
+          resultado = false;
+        }
+
+        // Mostrar o resultado na tela
+        document.getElementById("output").innerHTML = resultado;
+      }
+    </script>
+  </body>
+</html>

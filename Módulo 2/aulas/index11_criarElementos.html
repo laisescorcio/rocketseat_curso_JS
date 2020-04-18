@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <title>Curso Javascript</title>
+  </head>
+  <body>
+    <!-- DOM: ÁRVORE DE ELEMENTOS -->
+
+    <div id="app">
+      <input id="nome">
+    </div>
+
+    <script>
+      // Criar o mesmo que <a href="https://google.com">Acessar google</a>
+      // para criar um link "creatElement" > criar tag "a"
+      var linkElement = document.createElement('a');
+      // Referenciar um link
+      linkElement.setAttribute('href', 'https://www.google.com');
+      // Adicionar outro setAttribute
+      linkElement.setAttribute('title', 'Site do google');
+      // Texto para referenciar o link
+      var textElement = document.createTextNode('Acessar google')
+      // Relacionar link com o texto (adicionar o texto como filho do link)
+      linkElement.appendChild(textElement);
+
+
+      // Jogar o link e texto criado dentro do corpo do HTML
+      var containerElement = document.querySelector('#app');
+      containerElement.appendChild(linkElement);
+
+      // OUTROS
+      // Remover elementos por javascript, no caso, o input
+      var inputElement = document.querySelector("#nome");
+      // containerElement.removeChild(inputElement);
+      console.log(containerElement);
+    </script>
+  </body>
+</html>

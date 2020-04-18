@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>Curso Javascript</title>
+  </head>
+  <body>
+    <!-- DOM: ÁRVORE DE ELEMENTOS -->
+
+    <div id="app">
+      <!--
+        onclick: quando aperta 
+        onmouseover: quando passa o mouse em cima 
+        onkeydown: quando apertar uma tecla
+        onkeyup: quando soltar a tecla
+        onkeypress: quando clica e solta a tecla       
+      -->
+      <!-- <button 
+        onmouseover="mostraAlerta()">Me pressione</button> 
+      -->
+      <input type="text" name="nome" />
+      <button class="botao">Adicionar</button>
+    </div>
+
+    <script>
+      // getElementsByTagName: buscar os elementos através de determinada TAG
+      // se houver mais da mesma tag, seleciona ao final entre colchetes qual o input que quer
+      // se não definir qual a tag específica aparecerão todos dessa tag
+      // o mesmo para class (getElementsByClassName)
+      // querySelector: pode selecionar atributos dentro de elemento. Esee retorna UM ÚNICO elemento
+      // querySelectorAll: para retornar todo os elementos
+      // var inputElement = document.querySelectorAll("input");
+
+
+      // Para fazer ONCLICK dentro do JS
+      var inputElement = document.querySelector("input[name=nome]");
+      var btnElement = document.querySelector("button.botao");
+
+      btnElement.onclick= function() {
+        // Para aparecer escrito em texto que clicou no botão
+        var text = inputElement.value;
+        alert(text)
+      }
+
+      console.log(btnElement);
+    </script>
+  </body>
+</html>

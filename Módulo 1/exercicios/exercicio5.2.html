@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>Curso Javascript</title>
+  </head>
+  <body>
+    <div id="output"></div>
+
+    <script>
+      const elements = ["a", "b", "c"];
+
+      // a,b,c
+      document.write(elements.join());
+      document.write("<br>");
+
+      // a, b, c
+      document.write(elements.join(", "));
+      document.write("<br>");
+
+      //abc
+      document.write(elements.join(""));
+      document.write("<br>");
+
+      // a-b-c
+      document.write(elements.join("-"));
+
+      document.querySelector("output").innerHTML = mensagem;
+    </script>
+  </body>
+</html>

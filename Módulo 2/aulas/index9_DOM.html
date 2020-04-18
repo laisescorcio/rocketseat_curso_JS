@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>Curso Javascript</title>
+  </head>
+  <body>
+    <!-- DOM: ÁRVORE DE ELEMENTOS -->
+
+    <div id="app">
+      <!--
+        onclick: quando aperta 
+        onmouseover: quando passa o mouse em cima 
+        onkeydown: quando apertar uma tecla
+        onkeyup: quando soltar a tecla
+        onkeypress: quando clica e solta a tecla       
+      -->
+
+      <!-- <button 
+        onmouseover="mostraAlerta()">Me pressione</button> 
+      -->
+
+      <input onkeypress="mostraAlerta()" />
+    </div>
+
+    <script>
+      function mostraAlerta() {
+        alert("Botao foi clicado");
+      }
+    </script>
+  </body>
+</html>

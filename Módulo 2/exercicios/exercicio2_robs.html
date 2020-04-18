@@ -1,0 +1,63 @@
+<html style="background-color: #000;">
+
+  <head>
+    <title>Curso Javascript</title>
+  </head>
+  <div style="display: flex; flex-direction: row;" id="app">
+
+  </div>
+
+  <body>
+    <script>
+    // Criar botão
+    // Quando apertado criar um elemento que tenha um quadrado vermelho
+    // Criar um novo quadrado todas as vezes que clicar
+
+    var buttonElement = document.createElement('button');
+    var textElement = document.createTextNode('Clique aqui');
+    buttonElement.appendChild(textElement);
+
+
+    containerElement = document.querySelector('#app');
+    containerElement.appendChild(buttonElement);
+
+    buttonElement.onclick = function () {
+      var divElement = document.createElement('div');
+      containerElement.appendChild(divElement);
+
+      divElement.style.width = 100;
+      divElement.style.height = 100;
+      divElement.style.margin = 10;
+      divElement.style.backgroundColor = '#f00';
+
+
+      // Quando passar o mouse em cima do quadrado
+      // Mudar o quadrado para uma cor aleatória
+      // divElement.onmouseover = function () {
+      //   divElement.style.backgroundColor = getRandomColor();
+      // }
+      divElement.onmouseover = function () {
+        divElement.style.backgroundColor = getRandomColor();
+      }
+      setInterval(function () {
+        changeColor(divElement)
+      }, 500);
+    }
+
+    function changeColor(box) {
+      box.style.backgroundColor = getRandomColor();
+    }
+
+    function getRandomColor() {
+      var letters = "0123456789ABCDEF";
+      var color = "#";
+      for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+
+  </script>
+  </body>
+
+</html>

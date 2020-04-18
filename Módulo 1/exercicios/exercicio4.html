@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>Curso Javascript</title>
+  </head>
+  <body>
+    <br />
+    <div>
+      <label id="experience">Tempo de experiência em anos: </label>
+      <input type="text" id="tempo" />
+    </div>
+    <br />
+    <button id="check" onclick="verificarExperiencia()">Verificar</button>
+    <div id="output"></div>
+
+    <script>
+      // Função onde declara o nível de conhecimento da pessoa
+      // De 0-1 ano: iniciante
+      // De 1-3 anos: Intermediário
+      // De 3-6 anos: Avançado
+      // De 7 acima: Jedi Master
+
+      // Perguntar ao usuário quanto tempo de experiencia tem
+      // Adicionar uma função para SE tive de 0 a 1 aparecer Iniciante e assim por diante
+      // SE de 1 a 3, intermediário
+      // SE de 3 a 6, avançado
+      // SE de 7 acima, jedi master
+
+      function verificarExperiencia() {
+        var tempo = document.getElementById("tempo").value;
+        var resultado;
+
+        if (tempo <= 1) {
+          resultado = "Você é um profissional iniciante";
+        } else if (tempo > 1 && tempo <= 3) {
+          resultado = "Você é um profissional intermediário";
+        } else if (tempo > 3 && tempo <= 6) {
+          resultado = "Você é um profissional avançado";
+        } else {
+          resultado = "Você é um Jedi Master";
+        }
+
+        document.getElementById("output").innerHTML = resultado;
+      }
+    </script>
+  </body>
+</html>

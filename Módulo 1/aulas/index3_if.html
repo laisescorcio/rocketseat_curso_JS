@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>Curso Javascript</title>
+  </head>
+  <body>
+    <script>
+      function retornaSexo(sexo) {
+        // m, F
+        // Masculino, Feminino
+
+        // usar 3 '=' porque aí verifica o valor das variaveis e o tipo das variaveis são iguais, se é true
+        if (sexo === "M") {
+          return "Masculino";
+        } else if (sexo === "F") {
+          return "Feminino";
+        } else {
+          return "Outro";
+        }
+      }
+
+      // define variavel de novo pois anteriormente só seria visivel dentro da própria funcao, aqui ele aparece o resutlado
+      var resultado = retornaSexo("F");
+      console.log(resultado);
+    </script>
+  </body>
+</html>

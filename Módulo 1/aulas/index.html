@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>Curso Javascript</title>
+  </head>
+  <body>
+    <script>
+        // javascript
+        /* coloca-se dentro do body como ultimo elemento,
+              por causa da renderização (carregamento) ser horizontal.
+              É bom o JS ser por ultimo (antes da arvore de elementos)
+              pois assim as outras coisas já vão ter carregado e
+              irá funcionar */
+        var nome = "Diego";
+
+        // nome = 2;
+
+        // JS possui tipagem dinamica, pode ter varios tipo de variaveis nao só string ou numero numa mesma variavel
+        var idade = 23;
+        var peso = 80.5;
+        var humano = true;
+
+        // vetores: variável que armazena vários nomes de mesmo valor
+        // array: Diego = 0, Gabriel = 1, Lucas = 2
+        var alunos = ["Diego", "Gabriel", "Lucas"];
+
+        // objetos: variaveis que guardar todos os valores daquele objeto
+      //  Diego = 1
+        var alunos[1] = {
+          nome: "Diego",
+          idade: 23,
+          peso: 80.5,
+          humano: true,
+        };
+
+        // função global, escreve no inspecionar
+        // Diego = 1
+        console.log(alunos[1]);
+        console.log(aluno.nome);
+    </script>
+  </body>
+</html>
