@@ -1,3 +1,5 @@
+// AULA proposta: Referenciar os elementos da DOM que vamos usar no JS
+
 // Primeiro referencia a lista (ul)
 var listElement = document.querySelector("#app ul");
 // Referencia o input
